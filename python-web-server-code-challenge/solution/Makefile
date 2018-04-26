@@ -31,7 +31,11 @@ build:
 #
 # usage: `make jenkins-build JOB_NUMBER=156 GIT_SHA=4j9nq24 VERSION=1.0`
 jenkins-build:
-	$(MAKE) build BUILD_ARGS="--build-arg PYTHON_VERSION=$(PYTHON_VERSION) --build-arg JOB_NUMBER=$(JOB_NUMBER) --build-arg GIT_SHA=$(GIT_SHA) --build-arg VERSION=$(VERSION)"
+	$(MAKE) build \BUILD_ARGS="\
+		--build-arg PYTHON_VERSION=$(PYTHON_VERSION) \
+		--build-arg JOB_NUMBER=$(JOB_NUMBER) \
+		--build-arg GIT_SHA=$(GIT_SHA) \
+		--build-arg VERSION=$(VERSION)"
 
 #
 # The `CMD` variables means the default command from the Dockerfile can be overriden.
@@ -45,4 +49,11 @@ run:
 # in your souce code so you can instantly see changes without having to re-build and restart
 # your container.
 run-dev:
-	docker container run --rm -it -v "$(CURDIR)/www":$(WWW_ROOT) -p $(PORT):$(PORT) $(IMAGE):$(VERSION) $(CMD)
+	docker container run --rm -it \
+	-v "$(CURDIR)/www":$(WWW_ROOT) \
+	-p $(PORT):$(PORT) $(IMAGE):$(VERSION) $(CMD)
+
+check:
+	docker container run -it --rm --privileged \
+	-v "$(CURDIR)":/root/ projectatomic/dockerfile-lint \
+	dockerfile_lint -f docker/webserver/Dockerfile
