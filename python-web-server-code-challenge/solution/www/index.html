@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello Docker!</title>
+    <style>
+        #logo {
+            width: 60%;
+            display: block;
+            margin: 2em auto;
+            
+            opacity: 0;
+            animation-name: bounce-in;
+            animation-duration: 450ms;
+            animation-timing-function: linear;
+            animation-fill-mode: forwards;
+            
+            animation-delay: 0.2s;
+        }
+
+        @keyframes bounce-in {
+            0%{
+                opacity: 0;
+                transform: scale(0.3) translate3d(0,0,0);
+            }
+            50%{
+                opacity: 0.9;
+                transform: scale(1.1);
+            }
+            80%{
+                opacity: 1;
+                transform: scale(0.89);
+            }
+            100%{
+                opacity: 1;
+                transform: scale(1) translate3d(0,0,0);
+            }
+        }
+    </style>
+</head>
+<body>
+<p>
+    <img id="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Docker_%28container_engine%29_logo.svg/2000px-Docker_%28container_engine%29_logo.svg.png" />
+</p>
+</body>
+</html>
