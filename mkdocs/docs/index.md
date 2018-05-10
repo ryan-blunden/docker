@@ -13,4 +13,8 @@ Visit [mkdocs.org](http://mkdocs.org)
 
 ## MkDocs Material theme Documentation
 
-Visit [squidfunk.github.io/mkdocs-material/](https://squidfunk.github.io/mkdocs-material/) 
+Visit [squidfunk.github.io/mkdocs-material/](https://squidfunk.github.io/mkdocs-material/)
+
+## The importance of SWOT Analysis
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XfB0g_JDIds" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> 

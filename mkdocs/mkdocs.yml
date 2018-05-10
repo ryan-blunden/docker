@@ -1,4 +1,4 @@
-site_name: Your Project Docs
+site_name: Roames Review
 
 theme:
   name: material
@@ -20,3 +20,4 @@ pages:
 - Home: 'index.md'
 - Code: 'code.md'
 - Alerts: 'alerts.md'
+- API: 'api.md'
