@@ -1,0 +1,22 @@
+site_name: Your Project Docs
+
+theme:
+  name: material
+  palette:
+    primary: 'blue grey'
+    accent: 'blue grey'
+  logo:
+    icon: 'chrome_reader_mode'
+
+markdown_extensions:
+    - toc:
+        permalink: true
+    - admonition:
+    - markdown_newtab:
+    - codehilite:
+        linenums: true
+
+pages:
+- Home: 'index.md'
+- Code: 'code.md'
+- Alerts: 'alerts.md'

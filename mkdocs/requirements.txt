@@ -1,0 +1,4 @@
+mkdocs
+markdown-newtab
+mkdocs-material
+pygments
