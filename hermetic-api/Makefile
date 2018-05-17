@@ -1,8 +1,8 @@
-API_IMAGE_NAME=rabbitbird/hermetic-api
+IMAGE_NAME=rabbitbird/hermetic-api
 VERSION=1.0
 
 build:
-	docker image build -t $(API_IMAGE_NAME):$(VERSION) .
+	docker image build -t $(IMAGE_NAME):$(VERSION) -t $(IMAGE_NAME):latest .
 
 run: build
-	docker container run --rm -v "$(CURDIR)/data":/var/www/api/v1 -p 8080:80 $(API_IMAGE_NAME):$(VERSION)
+	docker container run --rm -v "$(CURDIR)/data":/var/www/api/v1 -p 8080:80 $(IMAGE_NAME):$(VERSION)
