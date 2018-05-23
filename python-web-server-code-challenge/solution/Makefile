@@ -31,7 +31,7 @@ build:
 #
 # usage: `make jenkins-build JOB_NUMBER=156 GIT_SHA=4j9nq24 VERSION=1.0`
 jenkins-build:
-	$(MAKE) build \BUILD_ARGS="\
+	"$(MAKE)" build \BUILD_ARGS="\
 		--build-arg PYTHON_VERSION=$(PYTHON_VERSION) \
 		--build-arg JOB_NUMBER=$(JOB_NUMBER) \
 		--build-arg GIT_SHA=$(GIT_SHA) \
