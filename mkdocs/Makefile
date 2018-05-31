@@ -10,3 +10,6 @@ server: docker-build
 
 build: docker-build
 	docker container run --rm -v "$(CURDIR)":/usr/src/app $(IMAGE_NAME):$(VERSION) mkdocs build --clean --strict
+
+check:
+	cd ../ && "$(MAKE)" dockerfile-check DOCKERFILE="mkdocs/Dockerfile"

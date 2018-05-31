@@ -49,6 +49,8 @@ WORDPRESS_PORT=8080
 build:
 	docker image build -t $(WORDPRESS_IMAGE):$(WORDPRESS_VERSION) -t $(WORDPRESS_IMAGE):latest .
 
+check:
+	cd ../ && "$(MAKE)" dockerfile-check DOCKERFILE="wordpress/Dockerfile"
 
 WORDPRESS_NAME=rabbitbird-wordpress
 

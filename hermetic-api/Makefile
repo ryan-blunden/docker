@@ -6,3 +6,6 @@ build:
 
 run: build
 	docker container run --rm -v "$(CURDIR)/data":/var/www/api/v1 -p 8080:80 $(IMAGE_NAME):$(VERSION)
+
+check:
+	cd ../ && "$(MAKE)" dockerfile-check DOCKERFILE="hermetic-api/Dockerfile"
