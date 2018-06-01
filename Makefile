@@ -14,4 +14,4 @@ dockerfile-check:
 	dockerfile_lint -f $(DOCKERFILE)
 
 portainer:
-	 docker container run -p 9000:9000 --rm -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer:latest
+	 docker container run -p 9000:9000 --rm -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer:latest --no-auth
