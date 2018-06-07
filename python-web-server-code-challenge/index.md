@@ -1,6 +1,6 @@
 # Python Web Server Docker Code Challenge
 
-The challenge is to create a Dockerfile and that is a Python or other static web server. You'll 
+The challenge is to create a Dockerfile and is a Python (or other, if you want a harder challenge) static web server. You'll 
 also create a Makefile for easy management.
 
 It is designed to test your knowledge of the most fundamental Dockerfile
@@ -22,3 +22,7 @@ the order of operations and what Docker image you extend from.
   - One command for running the image in dev mode where it volume mounts the `www` from the host directory to `/usr/src/app`.
 
 Bonus points for integrating Project Atomic's Dockerfile linter - https://github.com/projectatomic/dockerfile_lint.  
+
+## If you're stuck
+
+That's ok! Look in the solution folder but be sure not to copy and paste, but to manually type all the code, ensuring that you understand what you're typing as you go.
