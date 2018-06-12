@@ -1,4 +1,4 @@
-FROM nginx:1.13-alpine
+FROM nginx:1-alpine
 
 LABEL maintainer="Ryan Blunden <ryan.blunden@rabbitbird.com>"
 
@@ -16,4 +16,4 @@ RUN mkdir -p /var/www/api/v1
 COPY ./data /var/www/api/v1
 COPY ./conf/api.conf /etc/nginx/conf.d/
 
-EXPOSE 443
+EXPOSE 8080
