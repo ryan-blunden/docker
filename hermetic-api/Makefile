@@ -2,6 +2,7 @@ IMAGE_NAME=rabbitbird/hermetic-api
 VERSION=1.0
 
 build:
+	docker image pull nginx:1-alpine
 	docker image build -t $(IMAGE_NAME):$(VERSION) -t $(IMAGE_NAME):latest .
 
 run: build

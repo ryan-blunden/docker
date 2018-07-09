@@ -1,5 +1,5 @@
 IMAGE_NAME=rabbitbird/mkdocs
-PORT=8080
+PORT=8000
 VERSION=1.0
 
 docker-build:

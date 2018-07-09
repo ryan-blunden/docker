@@ -22,7 +22,6 @@ PYTHON_VERSION=3.6.5
 #
 # usage: `make build VERSION=1.0`
 build:
-	
 	docker image build $(BUILD_ARGS) -t $(IMAGE):$(VERSION) -f docker/webserver/Dockerfile .
 
 # Emulate the passing in build arguments to the `build` target, like would be done in Jenkins or other CI system.

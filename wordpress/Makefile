@@ -47,6 +47,7 @@ WORDPRESS_VERSION=1.0
 WORDPRESS_PORT=8080
 
 build:
+	docker image pull wordpress:4.9-php7.2-apache
 	docker image build -t $(WORDPRESS_IMAGE):$(WORDPRESS_VERSION) -t $(WORDPRESS_IMAGE):latest .
 
 check:
