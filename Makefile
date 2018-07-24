@@ -1,3 +1,7 @@
+build:
+	cd mkdocs && "$(MAKE)" docker-build
+	cd hermetic-api && "$(MAKE)" build
+
 docker-for-mac-shell:
 	docker container run --rm -it --privileged --pid=host debian:stretch-slim nsenter -t 1 -m -u -n -i sh
 
