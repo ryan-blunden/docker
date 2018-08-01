@@ -13,7 +13,7 @@ RUN apk update && \
 WORKDIR /usr/src/app
 
 COPY requirements.txt ./
-RUN pip install -r requirements.txt && \
+RUN pip install -r requirements.txt --trusted-host pypi.org --trusted-host files.pythonhosted.org && \
     rm -r /root/.cache
 
 COPY ./docs mkdocs.yml ./
