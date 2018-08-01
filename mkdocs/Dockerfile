@@ -7,7 +7,7 @@ LABEL version='latest'
 RUN apk update && \
     apk upgrade && \
     apk add --no-cache python3 && \
-    pip install --upgrade pip setuptools && \
+    pip install --upgrade pip setuptools --trusted-host pypi.org --trusted-host files.pythonhosted.org && \
     rm -r /root/.cache
 
 WORKDIR /usr/src/app
