@@ -16,7 +16,7 @@ COPY requirements.txt ./
 RUN pip install -r requirements.txt --trusted-host pypi.org --trusted-host files.pythonhosted.org && \
     rm -r /root/.cache
 
-COPY ./docs mkdocs.yml ./
+COPY . .
 
 EXPOSE 8000
 
