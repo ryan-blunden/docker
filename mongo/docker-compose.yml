@@ -13,7 +13,7 @@ services:
     volumes:
       - ./data/db:/data/db
     networks:
-      - backend
+      - mongo
 
   mongo-express:
     image: mongo-express:latest
@@ -23,9 +23,7 @@ services:
       ME_CONFIG_MONGODB_ADMINUSERNAME: root
       ME_CONFIG_MONGODB_ADMINPASSWORD: password
     networks:
-      - frontend
-      - backend
+      - mongo
 
 networks:
-  frontend:
-  backend:
+  mongo:
