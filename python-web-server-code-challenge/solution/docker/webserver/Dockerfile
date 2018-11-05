@@ -29,7 +29,7 @@ RUN printf "GIT_SHA=${GIT_SHA}\nJOB_NUMBER=${JOB_NUMBER}\nVERSION=${VERSION}\n" 
 # The health check *must* return 0 or 1 so either make sure it does, or you can use the ` || exit 1` trick.
 # Kubernetes doesn't use this but defining the url of the healthcheck here means 
 # we know what to use when writing our Kubernetes Pod spec.
-HEALTHCHECK --interval=5s --timeout=5s --retries=3 CMD wget localhost:8080/healthz -q -O - > /dev/null 2>&1
+HEALTHCHECK --interval=5s --timeout=5s --retries=3 CMD wget localhost:8080/healthz -q -O - > /dev/null 2>&1 || exit 1
 
 # Also not used by Kubernetes but is good to document the application port
 EXPOSE 8080
